@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dab</title>
+</head>
+<body>
+	{% if not signed_in %}
+		<a href="/login">Login with GitHub</a>
+	{% else %}
+		<a href="/user_info">View your info</a>
+		<br>
+		<a href="/logout">Logout</a>
+	{% endif %}
+</body>
+</html>

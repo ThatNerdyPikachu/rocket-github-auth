@@ -55,7 +55,7 @@
 						</tr>
 					</table>
 
-					<button class="{{button}}" onclick="redirect('/logout');" type="button"><i class="fas fa-home text-3xl"></i> Heck go back</button>
+					<button class="{{button}}" onclick="redirect('/');" type="button"><i class="fas fa-home text-3xl"></i> Heck go back</button>
 				</center>
 			</div>
 		</div>

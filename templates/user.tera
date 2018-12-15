@@ -1,0 +1,70 @@
+{% set button = "bg-black text-white p-4 text-2xl shadow-lg hover:bg-white hover:text-black" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dab</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body class="bg-purple-light">
+	<div class="flex flex-col items-center justify-center h-screen">
+		<div class="bg-white max-w-md rounded">
+			<div class="p-8">
+				<h2 class="mb-2">User Info</h2>
+				<p class="mb-8 text-base font-medium italic">nice work buddy</p>
+
+				<center>
+					<table class="border-3 border-grey-darker mb-8">
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Username</td>
+							<td class="border-2 border-grey-darker p-2">{{login}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Name</td>
+							<td class="border-2 border-grey-darker p-2">{{name}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Company</td>
+							<td class="border-2 border-grey-darker p-2">{{company}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Location</td>
+							<td class="border-2 border-grey-darker p-2">{{location}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Email</td>
+							<td class="border-2 border-grey-darker p-2">{{email}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Bio</td>
+							<td class="border-2 border-grey-darker p-2">{{bio}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Repos</td>
+							<td class="border-2 border-grey-darker p-2">{{public_repos}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Followers</td>
+							<td class="border-2 border-grey-darker p-2">{{followers}}</td>
+						</tr>
+						<tr>
+							<td class="border-2 border-grey-darker p-2">Following</td>
+							<td class="border-2 border-grey-darker p-2">{{following}}</td>
+						</tr>
+					</table>
+
+					<button class="{{button}}" onclick="redirect('/logout');" type="button"><i class="fas fa-home text-3xl"></i> Heck go back</button>
+				</center>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	function redirect(endpoint) {
+		window.location = endpoint;
+	}
+</script>
+</html>
